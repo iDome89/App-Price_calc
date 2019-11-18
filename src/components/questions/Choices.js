@@ -9,11 +9,10 @@ import {
   ButtonLabel
 } from "../StyledComponents";
 
-const Choices = ({ pagename, values }) => {
+const Choices = ({ pagename, values, path }) => {
   const [price, setPrice, history] = useContext(PagesContext);
-  const newHistory = history.location.pathname.replace("/edit", "");
   const arrayCheck = obj => {
-    if (obj.url !== newHistory) return true;
+    if (obj.url !== path) return true;
   };
 
   const AddPrice = e => {
@@ -23,7 +22,7 @@ const Choices = ({ pagename, values }) => {
         setPrice([
           ...newState,
           {
-            url: newHistory,
+            url: path,
             icon: element.icon,
             price: element.price,
             id: element.id,
@@ -31,8 +30,8 @@ const Choices = ({ pagename, values }) => {
             page: pagename
           }
         ]);
-        history.push(element.next);
       }
+      history.push(element.next);
     });
   };
   return (

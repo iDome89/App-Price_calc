@@ -153,7 +153,6 @@ const RecapWrapper = styled(FrontWrapper)`
 const RecapContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   margin: auto;

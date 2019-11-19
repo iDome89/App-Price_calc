@@ -21,9 +21,11 @@ const ContactForm = () => {
     message: ""
   });
   const onSubmit = e => {
+    e.preventDefault();
     axios
       .post("https://mailthis.to/iDome89", {
         _subject: email.subject,
+        selections: JSON.stringify(context[0]),
         email: email.email,
         name: email.name,
         message: email.message

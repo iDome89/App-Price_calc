@@ -21,6 +21,9 @@ import {
 function Recap() {
   const context = useContext(PagesContext);
   const [show, setShow] = useState({ toggle: false });
+  const sortedPrice = context[0].sort(function(a, b) { 
+    return a.order- b.order;
+    })
   const handleShow = () => {
     setShow({ toggle: !show.toggle });
   };
@@ -39,7 +42,7 @@ function Recap() {
         Your Estimated end price is: <EndPrice>{context[3]}€</EndPrice>
       </RecapText>
       {show.toggle &&
-        context[0].map(selection => (
+        sortedPrice.map(selection => (
           <>
             <RecapContainer id={uuid()}>
               <RecapSingleSelectionContainer id={uuid()}>

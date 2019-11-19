@@ -4,6 +4,7 @@ const Model = () => {
     {
       name: "type",
       title: "What platform you want your app to be built on?",
+      order:1,
       id: uuid(),
       values: [
         {
@@ -33,6 +34,7 @@ const Model = () => {
       name: "social",
       title: "Do you want your App to be connected to Socials?",
       id: uuid(),
+      order:2,
       values: [
         {
           id: uuid(),
@@ -61,6 +63,7 @@ const Model = () => {
       name: "payments",
       title: "Do you want in-App purchases?",
       id: uuid(),
+      order:3,
       values: [
         {
           id: uuid(),
@@ -89,6 +92,7 @@ const Model = () => {
       name: "logo",
       title: "Do you want a logo for your App?",
       id: uuid(),
+      order:4,
       values: [
         {
           id: uuid(),

@@ -9,7 +9,7 @@ import {
   ButtonLabel
 } from "../StyledComponents";
 
-const Choices = ({ pagename, values, path }) => {
+const Choices = ({ pagename, values, path, order }) => {
   const [price, setPrice, history] = useContext(PagesContext);
   const arrayCheck = obj => {
     if (obj.url !== path) return true;
@@ -22,6 +22,7 @@ const Choices = ({ pagename, values, path }) => {
         setPrice([
           ...newState,
           {
+            order:order,
             url: path,
             icon: element.icon,
             price: element.price,

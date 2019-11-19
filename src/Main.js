@@ -26,6 +26,7 @@ function Main() {
               render={() => (
                 <>
                   <Choices
+                    order={choice.order}
                     path={`/questions/${choice.name}`}
                     values={choice.values}
                     pagename={choice.title}

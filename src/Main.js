@@ -18,7 +18,7 @@ function Main() {
         <PagesProvider>
           <Route exact path="/" component={Frontpage} />
           <Route exact path="/recap" component={Recap} />
-          <Route path="/confirm" component={ConfirmPage} />
+          <Route exact path="/confirm" component={ConfirmPage} />
           {model.map(choice => (
             <Route
               key={uuid()}

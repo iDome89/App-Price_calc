@@ -29,7 +29,7 @@ const ContactForm = () => {
         email: email.email,
         name: email.name,
         message: email.message,
-        _after: "https://m9p1n.csb.app/"
+        _after: "https://m9p1n.csb.app/confirm"
       })
       .then(function() {
         window.location.href = "https://mailthis.to/confirm";

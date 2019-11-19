@@ -257,8 +257,17 @@ const FormSubmit = styled(FormInput)`
     box-shadow: 0 5px #28bd43;
   }
 `;
+const Error = styled.span`
+  color: red;
+  font-size: 0.7rem;
+  font-family: "Quicksand", sans-serif;
+  :before {
+    content: "❗ ";
+  }
+`;
 
 export {
+  Error,
   Form,
   FormTextArea,
   FormInput,

@@ -23,7 +23,7 @@ const ContactForm = () => {
   });
   const onSubmit = e => {
     axios
-      .post("https://mailthis.to/dominik.zecoli@gmail.com", {
+      .post("https://mailthis.to/iDome89", {
         _subject: email.subject,
         selections: JSON.stringify(selections),
         email: email.email,

@@ -14,6 +14,7 @@ import { PagesContext } from "./model/PagesContext";
 const ContactForm = () => {
   const context = useContext(PagesContext);
   const { register, handleSubmit, errors } = useForm();
+  const selections = context[0].map(item => [item.page, item.name]);
   const [email, setEmail] = useState({
     subject: "Project Request",
     name: "",
@@ -21,17 +22,17 @@ const ContactForm = () => {
     message: ""
   });
   const onSubmit = e => {
-    e.preventDefault();
     axios
-      .post("https://mailthis.to/iDome89", {
+      .post("https://mailthis.to/dominik.zecoli@gmail.com", {
         _subject: email.subject,
-        selections: JSON.stringify(context[0]),
+        selections: JSON.stringify(selections),
         email: email.email,
         name: email.name,
-        message: email.message
+        message: email.message,
+        _after: "https://m9p1n.csb.app/"
       })
       .then(function() {
-        context[2].push("/");
+        window.location.href = "https://mailthis.to/confirm";
       })
       .catch(function(error) {
         console.log(error);

@@ -87,7 +87,7 @@ const Model = () => {
     },
     {
       name: "logo",
-      title: "Do you want in-App purchases?",
+      title: "Do you want a logo for your App?",
       id: uuid(),
       values: [
         {

@@ -30,8 +30,12 @@ const Choices = ({ pagename, values, path }) => {
             page: pagename
           }
         ]);
+        if (!history.location.pathname.endsWith("edit")) {
+          history.push(element.next);
+        } else {
+          history.push("/recap");
+        }
       }
-      history.push(element.next);
     });
   };
   return (

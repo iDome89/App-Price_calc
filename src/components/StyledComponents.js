@@ -28,7 +28,7 @@ const MainTitle = styled.h1`
 const SubText = styled.h3`
   color: #e5e5e5;
   max-width: 60vw;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
 `;
 const StartButton = styled.button`
@@ -204,7 +204,66 @@ const Change = styled(Toggle)`
   margin-top: auto;
   margin-left: 6px;
 `;
+
+/* Contact Form */
+const Form = styled.form`
+  margin-top: 3em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  width: 23em;
+`;
+const FormLabel = styled.label`
+  font-family: "Quicksand", sans-serif;
+  color: #c1054a;
+`;
+const FormInput = styled.input`
+  color: #e5e5e5;
+  margin-top: 10px;
+  font-family: "Quicksand", sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #c1054a;
+`;
+const FormTextArea = styled.textarea`
+  color: #e5e5e5;
+  margin-top: 10px;
+  font-family: "Quicksand", sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #c1054a;
+  resize: none;
+`;
+const FormSubmit = styled(FormInput)`
+  border-bottom: none;
+  background-color: #28bd43;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  width: 8em;
+  height: 2em;
+  border: none;
+  outline: none;
+  align-self: center;
+  border-radius: 25px;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #1b822e;
+    transform: translateY(4px);
+    box-shadow: 0 5px #28bd43;
+  }
+`;
+
 export {
+  Form,
+  FormTextArea,
+  FormInput,
+  FormLabel,
+  FormSubmit,
   EndPrice,
   AnswerContainer,
   Change,

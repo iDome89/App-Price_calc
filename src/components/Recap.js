@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import PreviousPage from "../components/PreviousPage";
+import ContactForm from "./ContactForm";
 import { PagesContext } from "./model/PagesContext";
 import uuid from "uuid";
 import {
@@ -61,9 +62,10 @@ function Recap() {
         {show.toggle ? "(Hide Recap)" : "(Show Recap)"}
       </Toggle>
       <SubText>
-        You can Contact us using the form below and we will bring life to your
-        project together!
+        You can Contact us using the form below and we will bring your project
+        to life together!
       </SubText>
+      <ContactForm />
     </RecapWrapper>
   );
 }

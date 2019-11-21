@@ -1,4 +1,50 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+/*Animations*/
+const fade = keyframes`
+   0%{
+     opacity:0;
+   }
+   100%{
+     opacity: 1;
+   }
+`;
+const textFromLeft = keyframes`
+  0%{
+    left:-2000px;
+
+  }
+  100%{
+    left:0;
+  }
+
+`;
+const textFromRight = keyframes`
+  0%{
+    right:-2000px;
+
+  }
+  100%{
+    right:0;
+  }
+
+`;
+const fromBottom = keyframes`
+  0%{
+    bottom:-2000px;
+  }
+  100%{
+    bottom:0px;
+  }
+`;
+const fromTop = keyframes`
+  0%{
+    top:-2000px;
+  }
+
+  100%{
+    top:0px;
+  }`;
+
 /* Front Page */
 const CoverImage = styled.img`
   margin-top: 1em;
@@ -9,32 +55,39 @@ const CoverImage = styled.img`
   width: 12em;
   height: 12em;
   opacity: 0.9;
+  animation: 3s ${fade} ease-out;
   @media screen and (max-width: 488px) {
     width: 8em;
     height: 8em;
   }
 `;
+
 const FrontWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background-color: #070707;
 `;
+
 const MainTitle = styled.h1`
   color: #e5e5e5;
   font-size: 3.5rem;
   text-align: center;
+  position: relative;
+  animation: 2s ${textFromLeft} forwards;
   @media screen and (max-width: 488px) {
     font-size: 2rem;
   }
 `;
+
 const SubText = styled.h3`
   color: #e5e5e5;
   max-width: 60vw;
   font-size: 1.5rem;
   text-align: center;
+  position: relative;
+  animation: 2s ${textFromRight} forwards;
   @media screen and (max-width: 488px) {
     font-size: 1rem;
   }
@@ -52,6 +105,8 @@ const StartButton = styled.button`
   font-size: 1em;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  position: relative;
+  animation: 2s ${fromBottom} forwards;
   &:hover {
     transform: scale(1.05);
     cursor: pointer;
@@ -72,6 +127,9 @@ const Previous = styled.span`
   left: 2em;
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
+  transition-property: all;
+  transition-duration: 0.6s;
+  animation: 3s ${fade} ease-out;
   :before {
     content: "« Previous Page";
   }
@@ -97,6 +155,12 @@ const Pricing = styled.span`
   position: absolute;
   top: 3em;
   right: 2em;
+  transition-property: all;
+  transition-duration: 0.6s;
+  animation: 3s ${fade} ease-out;
+  :hover {
+    transform: scale(2);
+  }
   :after {
     content: "€";
   }
@@ -111,6 +175,8 @@ const Icon = styled.img`
   width: 5em;
   height: 5em;
   border-radius: 50%;
+  transition-property: all;
+  transition-duration: 0.6s;
   :hover {
     cursor: pointer;
     transform: scale(1.3);
@@ -127,12 +193,13 @@ const MainWrapper = styled.div`
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background-color: #070707;
 `;
 const MainText = styled.h1`
   color: #e5e5e5;
   font-size: 3.5rem;
   text-align: center;
+  position: relative;
+  animation: 1.5s ${textFromLeft} forwards;
   @media screen and (min-width: 300px) and (max-width: 488px) {
     font-size: 2rem;
   }
@@ -148,6 +215,9 @@ const SelectionsContainer = styled.div`
   align-items: center;
   margin-right: 3em;
   margin-left: 3em;
+  position: relative;
+  position: relative;
+  animation: 1.3s ${fromBottom} forwards;
   h6 {
     margin-top: 3em;
   }
@@ -185,9 +255,14 @@ const RecapIcon = styled.img`
 `;
 const RecapText = styled(SubText)`
   font-size: 3.2rem;
+  position: relative;
+  animation: 3s ${textFromLeft} forwards;
 `;
 const EndPrice = styled.span`
   color: #c1054a;
+  position: relative;
+  background: none;
+  animation: 4s ${fromTop} ease-out;
 `;
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
@@ -200,6 +275,8 @@ const Toggle = styled.span`
   text-align: center;
   color: #c1054a;
   font-weight: 600;
+  position: relative;
+  animation: 3s ${fade} ease-out;
   :hover {
     cursor: pointer;
     color: #630226;
@@ -211,6 +288,7 @@ const RecapLabel = styled(ButtonLabel)`
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
   flex-wrap: wrap;
+  animation: 3s ${fade} ease-out;
   width: 100%;
 `;
 const Answer = styled(ButtonLabel)`
@@ -232,6 +310,8 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 23em;
+  position: relative;
+  animation: 3s ${fade} ease-out;
   @media screen and (min-width: 300px) and (max-width: 488px) {
     width: 18em;
   }

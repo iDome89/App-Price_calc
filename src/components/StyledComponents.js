@@ -323,7 +323,7 @@ const FormTextArea = styled.textarea`
   resize: none;
 `;
 const FormSubmit = styled(FormInput)`
-  padding-bottom: none;
+  margin-bottom: 0;
   background-color: #28bd43;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;

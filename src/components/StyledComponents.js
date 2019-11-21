@@ -273,21 +273,19 @@ const AnswerContainer = styled(RecapContainer)`
   width: 100%;
 `;
 const Answer = styled(ButtonLabel)`
-  margin-top: -3px;
   font-weight: 800;
   color: #28bd43;
 `;
 const Change = styled(Toggle)`
   font-size: 0.8rem;
   text-decoration: none;
-  margin-top: auto;
-  margin-left: 6px;
+  padding-left: 6px;
 `;
 
 /* Contact Form */
 const Form = styled.form`
-  margin-top: 3em;
-  margin-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   width: 23em;
@@ -321,7 +319,7 @@ const FormTextArea = styled.textarea`
   resize: none;
 `;
 const FormSubmit = styled(FormInput)`
-  border-bottom: none;
+  padding-bottom: none;
   background-color: #28bd43;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;

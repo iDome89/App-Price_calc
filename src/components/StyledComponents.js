@@ -265,7 +265,6 @@ const RecapLabel = styled(ButtonLabel)`
 `;
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
-  flex-wrap: wrap;
   animation: 3s ${fade} ease-out;
 `;
 const Answer = styled(ButtonLabel)`

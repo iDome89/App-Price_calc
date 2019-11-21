@@ -8,26 +8,7 @@ const fade = keyframes`
      opacity: 1;
    }
 `;
-const textFromLeft = keyframes`
-  0%{
-    left:-2000px;
 
-  }
-  100%{
-    left:0;
-  }
-
-`;
-const textFromRight = keyframes`
-  0%{
-    right:-2000px;
-
-  }
-  100%{
-    right:0;
-  }
-
-`;
 const fromBottom = keyframes`
   0%{
     bottom:-2000px;
@@ -75,7 +56,7 @@ const MainTitle = styled.h1`
   font-size: 3.5rem;
   text-align: center;
   position: relative;
-  animation: 2s ${textFromLeft} forwards;
+  animation: 1s ${fade} ease-out;
   @media screen and (max-width: 488px) {
     font-size: 2rem;
   }
@@ -87,7 +68,7 @@ const SubText = styled.h3`
   font-size: 1.5rem;
   text-align: center;
   position: relative;
-  animation: 2s ${textFromRight} forwards;
+  animation: 2s ${fade} ease-out;
   @media screen and (max-width: 488px) {
     font-size: 1rem;
   }
@@ -199,7 +180,7 @@ const MainText = styled.h1`
   font-size: 3.5rem;
   text-align: center;
   position: relative;
-  animation: 1.5s ${textFromLeft} forwards;
+  animation: 1.5s ${fade} ease-out;
   @media screen and (min-width: 300px) and (max-width: 488px) {
     font-size: 2rem;
   }
@@ -256,13 +237,13 @@ const RecapIcon = styled.img`
 const RecapText = styled(SubText)`
   font-size: 3.2rem;
   position: relative;
-  animation: 3s ${textFromLeft} forwards;
+  animation: 3s ${fade} ease-out;
 `;
 const EndPrice = styled.span`
   color: #c1054a;
   position: relative;
   background: none;
-  animation: 3s ${fromTop} ease-out;
+  animation: 2s ${fromTop} ease-out;
 `;
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
@@ -288,7 +269,7 @@ const RecapLabel = styled(ButtonLabel)`
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
   flex-wrap: wrap;
-  animation: 2s ${fade} ease-out;
+  animation: 3s ${fade} ease-out;
   width: 100%;
 `;
 const Answer = styled(ButtonLabel)`

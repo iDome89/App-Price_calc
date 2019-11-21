@@ -212,7 +212,6 @@ const ButtonLabel = styled.h6`
   text-align: center;
   font-size: 1rem;
   font-family: "Quicksand", sans-serif;
-  width: 100%;
 `;
 
 /* Recap */
@@ -225,7 +224,6 @@ const RecapContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
 `;
 
 const RecapIcon = styled.img`
@@ -251,7 +249,6 @@ const RecapSingleSelectionContainer = styled.div`
 `;
 
 const Toggle = styled.span`
-  max-width: 50vw;
   font-size: 1rem;
   text-align: center;
   color: #c1054a;
@@ -270,7 +267,6 @@ const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
   flex-wrap: wrap;
   animation: 3s ${fade} ease-out;
-  width: 100%;
 `;
 const Answer = styled(ButtonLabel)`
   font-weight: 800;

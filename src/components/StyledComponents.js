@@ -228,7 +228,7 @@ const RecapContainer = styled.div`
 
 const RecapIcon = styled.img`
   margin-top: 1em;
-  margin-right:1em;
+  margin-right:0.5em;
   border-radius: 50%;
   width: 3em;
   height: 3em;
@@ -247,6 +247,10 @@ const EndPrice = styled.span`
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
   justify-content: flex-start;
+  margin-right:1em;
+  margin-left:1em;
+  margin-top:0;
+  margin-bottom:0;
 `;
 
 const Toggle = styled.span`
@@ -279,7 +283,7 @@ const Answer = styled(ButtonLabel)`
 const Change = styled(Toggle)`
   font-size: 0.8rem;
   text-decoration: none;
-  padding-left: 6px;
+  margin-left: 6px;
 `;
 
 /* Contact Form */

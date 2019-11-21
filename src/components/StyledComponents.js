@@ -1,6 +1,7 @@
 import styled from "styled-components";
 /* Front Page */
 const CoverImage = styled.img`
+  margin-top: 1em;
   alt: "cover-image";
   content: url("https://images.unsplash.com/photo-1545138697-45eb2968b249?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1559&q=80");
   box-shadow: 0px 0px 0px 5px rgba(189, 189, 189, 0.57);
@@ -8,9 +9,12 @@ const CoverImage = styled.img`
   width: 12em;
   height: 12em;
   opacity: 0.9;
+  @media screen and (max-width: 488px) {
+    width: 8em;
+    height: 8em;
+  }
 `;
 const FrontWrapper = styled.div`
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,15 +24,20 @@ const FrontWrapper = styled.div`
 `;
 const MainTitle = styled.h1`
   color: #e5e5e5;
-  max-width: 80vw;
-  font-size: 2rem;
+  font-size: 3.5rem;
   text-align: center;
+  @media screen and (max-width: 488px) {
+    font-size: 2rem;
+  }
 `;
 const SubText = styled.h3`
   color: #e5e5e5;
   max-width: 60vw;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
+  @media screen and (max-width: 488px) {
+    font-size: 1rem;
+  }
 `;
 const StartButton = styled.button`
   color: #e5e5e5;
@@ -55,6 +64,7 @@ const StartButton = styled.button`
 `;
 /* Prev, Restart, Price */
 const Previous = styled.span`
+  font-size: 1.2rem;
   color: #c1054a;
   font-weight: bold;
   position: absolute;
@@ -68,6 +78,10 @@ const Previous = styled.span`
   :hover {
     cursor: pointer;
     color: #630226;
+  }
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    top: 0.8em;
+    left: 0.8em;
   }
 `;
 
@@ -85,6 +99,10 @@ const Pricing = styled.span`
   right: 2em;
   :after {
     content: "€";
+  }
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    top: 1em;
+    right: 0.8em;
   }
 `;
 /* Choices */
@@ -108,25 +126,24 @@ const MainWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
   align-items: center;
   background-color: #070707;
 `;
 const MainText = styled.h1`
   color: #e5e5e5;
-  max-width: 80vw;
-  font-size: 2rem;
+  font-size: 3.5rem;
   text-align: center;
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    font-size: 2rem;
+  }
 `;
 const ButtonsWrapper = styled.div`
   display: flex;
   margin-top: 2em;
-  max-width: 100vw;
 `;
 const SelectionsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin-right: 3em;
@@ -134,12 +151,15 @@ const SelectionsContainer = styled.div`
   h6 {
     margin-top: 3em;
   }
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    margin: 1em;
+  }
 `;
 
 const ButtonLabel = styled.h6`
   color: #e5e5e5;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1rem;
   font-family: "Quicksand", sans-serif;
   width: 100%;
 `;
@@ -158,12 +178,13 @@ const RecapContainer = styled.div`
 `;
 
 const RecapIcon = styled.img`
+  margin-top: 1em;
   border-radius: 50%;
   width: 3em;
   height: 3em;
 `;
 const RecapText = styled(SubText)`
-  font-size: 1.5rem;
+  font-size: 3.2rem;
 `;
 const EndPrice = styled.span`
   color: #c1054a;
@@ -175,7 +196,7 @@ const RecapSingleSelectionContainer = styled.div`
 
 const Toggle = styled.span`
   max-width: 50vw;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   color: #c1054a;
   font-weight: 600;
@@ -185,7 +206,7 @@ const Toggle = styled.span`
   }
 `;
 const RecapLabel = styled(ButtonLabel)`
-  font-size: 0.7rem;
+  font-size: 1rem;
 `;
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
@@ -198,7 +219,7 @@ const Answer = styled(ButtonLabel)`
   color: #28bd43;
 `;
 const Change = styled(Toggle)`
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   text-decoration: none;
   margin-top: auto;
   margin-left: 6px;
@@ -211,6 +232,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 23em;
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    width: 18em;
+  }
 `;
 const FormLabel = styled.label`
   font-family: "Quicksand", sans-serif;

@@ -21,9 +21,9 @@ import {
 function Recap() {
   const context = useContext(PagesContext);
   const [show, setShow] = useState({ toggle: false });
-  const sortedPrice = context[0].sort(function(a, b) { 
-    return a.order- b.order;
-    })
+  const sortedPrice = context[0].sort(function(a, b) {
+    return a.order - b.order;
+  });
   const handleShow = () => {
     setShow({ toggle: !show.toggle });
   };
@@ -44,12 +44,12 @@ function Recap() {
       {show.toggle &&
         sortedPrice.map(selection => (
           <>
-            <RecapContainer id={uuid()}>
-              <RecapSingleSelectionContainer id={uuid()}>
-                <RecapIcon src={"/svg-icons/" + selection.icon} />
-                <AnswerContainer id={uuid()}>
-                  <RecapLabel id={uuid()}>{selection.page}</RecapLabel>
-                  <Answer id={uuid()}>
+            <RecapContainer key={uuid()}>
+              <RecapSingleSelectionContainer key={uuid()}>
+                <RecapIcon key={uuid()} src={"/svg-icons/" + selection.icon} />
+                <AnswerContainer key={uuid()}>
+                  <RecapLabel key={uuid()}>{selection.page}</RecapLabel>
+                  <Answer key={uuid()}>
                     {selection.name}
                     <Change onClick={handleChange} id={selection.id}>
                       (Change)

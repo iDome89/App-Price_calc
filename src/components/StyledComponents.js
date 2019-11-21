@@ -262,7 +262,7 @@ const EndPrice = styled.span`
   color: #c1054a;
   position: relative;
   background: none;
-  animation: 4s ${fromTop} ease-out;
+  animation: 3s ${fromTop} ease-out;
 `;
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
@@ -288,7 +288,7 @@ const RecapLabel = styled(ButtonLabel)`
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: row;
   flex-wrap: wrap;
-  animation: 3s ${fade} ease-out;
+  animation: 2s ${fade} ease-out;
   width: 100%;
 `;
 const Answer = styled(ButtonLabel)`

@@ -270,6 +270,7 @@ const AnswerContainer = styled(RecapContainer)`
 const Answer = styled(ButtonLabel)`
   font-weight: 800;
   color: #28bd43;
+  margin-bottom:0;
 `;
 const Change = styled(Toggle)`
   font-size: 0.8rem;

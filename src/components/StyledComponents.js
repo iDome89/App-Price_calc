@@ -228,6 +228,7 @@ const RecapContainer = styled.div`
 
 const RecapIcon = styled.img`
   margin-top: 1em;
+  margin-right:1em;
   border-radius: 50%;
   width: 3em;
   height: 3em;
@@ -264,13 +265,16 @@ const RecapLabel = styled(ButtonLabel)`
   font-size: 1rem;
 `;
 const AnswerContainer = styled(RecapContainer)`
-  flex-direction: row;
+  flex-direction: column;
+  align-content:center;
   animation: 3s ${fade} ease-out;
+  margin-bottom:1em;
 `;
 const Answer = styled(ButtonLabel)`
   font-weight: 800;
   color: #28bd43;
   margin-bottom:0;
+  margin-top:-2em;
 `;
 const Change = styled(Toggle)`
   font-size: 0.8rem;

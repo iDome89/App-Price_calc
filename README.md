@@ -5,4 +5,7 @@ to commision an app/a website or anything because it is fully customizable.
 the full app can be found hosted on netlify [https://howmuchforanapp.netlify.com](https://howmuchforanapp.netlify.com).
 
 
+WIP
+
+
 

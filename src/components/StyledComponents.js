@@ -25,7 +25,31 @@ const fromTop = keyframes`
   100%{
     top:0px;
   }`;
-
+/*Admin Panel */
+const AdminLink = styled.span`
+  font-size: 1rem;
+  color: #c1054a;
+  font-weight: bold;
+  position: absolute;
+  top: 1em;
+  left: 2em;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 0.6s;
+  animation: 3s ${fade} ease-out;
+  :before {
+    content: "Admin";
+  }
+  :hover {
+    cursor: pointer;
+    color: #630226;
+  }
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    top: 0.8em;
+    left: 0.8em;
+  }
+`;
 /* Front Page */
 const CoverImage = styled.img`
   margin-top: 1em;
@@ -228,7 +252,7 @@ const RecapContainer = styled.div`
 
 const RecapIcon = styled.img`
   margin-top: 1em;
-  margin-right:0.5em;
+  margin-right: 0.5em;
   border-radius: 50%;
   width: 3em;
   height: 3em;
@@ -247,10 +271,10 @@ const EndPrice = styled.span`
 const RecapSingleSelectionContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-right:1em;
-  margin-left:1em;
-  margin-top:0;
-  margin-bottom:0;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
 const Toggle = styled.span`
@@ -270,15 +294,15 @@ const RecapLabel = styled(ButtonLabel)`
 `;
 const AnswerContainer = styled(RecapContainer)`
   flex-direction: column;
-  align-content:center;
+  align-content: center;
   animation: 3s ${fade} ease-out;
-  margin-bottom:1em;
+  margin-bottom: 1em;
 `;
 const Answer = styled(ButtonLabel)`
   font-weight: 800;
   color: #28bd43;
-  margin-bottom:0;
-  margin-top:-2em;
+  margin-bottom: 0;
+  margin-top: -2em;
 `;
 const Change = styled(Toggle)`
   font-size: 0.8rem;
@@ -297,6 +321,14 @@ const Form = styled.form`
   animation: 3s ${fade} ease-out;
   @media screen and (min-width: 300px) and (max-width: 488px) {
     width: 18em;
+  }
+`;
+const LoginForm = styled(Form)`
+  margin: auto;
+  margin-top: 10rem;
+  width: 10em;
+  @media screen and (min-width: 300px) and (max-width: 488px) {
+    width: 8em;
   }
 `;
 const FormLabel = styled.label`
@@ -353,6 +385,8 @@ const Error = styled.span`
 `;
 
 export {
+  LoginForm,
+  AdminLink,
   Error,
   Form,
   FormTextArea,
